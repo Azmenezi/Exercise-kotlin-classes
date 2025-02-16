@@ -1,14 +1,11 @@
 fun main() {
-    val book = Book()
-    book.title = "harry potter"
-    book.author = "humoud alghanim"
-    book.yearPublished = 2023
+    val book = Book("Harry Potter", "Homoud Alghanim", 2000)
 
-    println(book)
+    book.getBookInfo()
 }
 
-class Book {
-    var title: String = ""
-    var author: String = ""
-    var yearPublished: Int = 1900
+class Book(var title: String, var author: String, var yearPublished: Int) {
+    fun getBookInfo() {
+        println("$title by $author ($yearPublished)")
+    }
 }
